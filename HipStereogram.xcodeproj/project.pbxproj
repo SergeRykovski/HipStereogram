@@ -18,6 +18,8 @@
 		952FC12516303EF300061351 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 952FC12416303EF300061351 /* Default-568h@2x.png */; };
 		952FC176163052B400061351 /* HSMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 952FC175163052B400061351 /* HSMainViewController.m */; };
 		952FC17D1630568900061351 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 952FC17C1630568900061351 /* MainStoryboard_iPhone.storyboard */; };
+		952FC180163056F400061351 /* rollYourOwnButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 952FC17F163056F400061351 /* rollYourOwnButton.png */; };
+		952FC18316308CBD00061351 /* HSNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 952FC18216308CBD00061351 /* HSNavigationViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,9 @@
 		952FC174163052B400061351 /* HSMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSMainViewController.h; sourceTree = "<group>"; };
 		952FC175163052B400061351 /* HSMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSMainViewController.m; sourceTree = "<group>"; };
 		952FC17C1630568900061351 /* MainStoryboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = MainStoryboard_iPhone.storyboard; path = Resources/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		952FC17F163056F400061351 /* rollYourOwnButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rollYourOwnButton.png; path = Resources/images/rollYourOwnButton.png; sourceTree = "<group>"; };
+		952FC18116308CBD00061351 /* HSNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSNavigationViewController.h; sourceTree = "<group>"; };
+		952FC18216308CBD00061351 /* HSNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSNavigationViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +132,8 @@
 			children = (
 				952FC174163052B400061351 /* HSMainViewController.h */,
 				952FC175163052B400061351 /* HSMainViewController.m */,
+				952FC18116308CBD00061351 /* HSNavigationViewController.h */,
+				952FC18216308CBD00061351 /* HSNavigationViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -134,9 +141,18 @@
 		952FC12E16303F8600061351 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				952FC17E163056E700061351 /* images */,
 				952FC17C1630568900061351 /* MainStoryboard_iPhone.storyboard */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		952FC17E163056E700061351 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				952FC17F163056F400061351 /* rollYourOwnButton.png */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +211,7 @@
 				952FC12316303EF300061351 /* Default@2x.png in Resources */,
 				952FC12516303EF300061351 /* Default-568h@2x.png in Resources */,
 				952FC17D1630568900061351 /* MainStoryboard_iPhone.storyboard in Resources */,
+				952FC180163056F400061351 /* rollYourOwnButton.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,6 +225,7 @@
 				952FC11B16303EF300061351 /* main.m in Sources */,
 				952FC11F16303EF300061351 /* AppDelegate.m in Sources */,
 				952FC176163052B400061351 /* HSMainViewController.m in Sources */,
+				952FC18316308CBD00061351 /* HSNavigationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,10 +265,11 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "armv6 armv7 armv7s";
 			};
 			name = Debug;
 		};
@@ -269,11 +288,12 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "armv6 armv7 armv7s";
 			};
 			name = Release;
 		};
