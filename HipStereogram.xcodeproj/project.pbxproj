@@ -80,6 +80,10 @@
 			children = (
 				952FC11D16303EF300061351 /* AppDelegate.h */,
 				952FC11E16303EF300061351 /* AppDelegate.m */,
+				952FC12B16303F3000061351 /* Model */,
+				952FC12C16303F3500061351 /* View */,
+				952FC12D16303F4700061351 /* Controller */,
+				952FC12E16303F8600061351 /* Resources */,
 				952FC11516303EF300061351 /* Supporting Files */,
 			);
 			path = HipStereogram;
@@ -97,6 +101,34 @@
 				952FC12416303EF300061351 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		952FC12B16303F3000061351 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		952FC12C16303F3500061351 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		952FC12D16303F4700061351 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		952FC12E16303F8600061351 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,6 +273,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HipStereogram/HipStereogram-Prefix.pch";
 				INFOPLIST_FILE = "HipStereogram/HipStereogram-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -252,6 +285,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HipStereogram/HipStereogram-Prefix.pch";
 				INFOPLIST_FILE = "HipStereogram/HipStereogram-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
