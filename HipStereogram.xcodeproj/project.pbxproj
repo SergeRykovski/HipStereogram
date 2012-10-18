@@ -16,6 +16,8 @@
 		952FC12116303EF300061351 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 952FC12016303EF300061351 /* Default.png */; };
 		952FC12316303EF300061351 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 952FC12216303EF300061351 /* Default@2x.png */; };
 		952FC12516303EF300061351 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 952FC12416303EF300061351 /* Default-568h@2x.png */; };
+		952FC13316304BA900061351 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 952FC13216304BA900061351 /* MainStoryboard_iPhone.storyboard */; };
+		952FC176163052B400061351 /* HSMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 952FC175163052B400061351 /* HSMainViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,9 @@
 		952FC12016303EF300061351 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		952FC12216303EF300061351 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		952FC12416303EF300061351 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		952FC13216304BA900061351 /* MainStoryboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		952FC174163052B400061351 /* HSMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSMainViewController.h; sourceTree = "<group>"; };
+		952FC175163052B400061351 /* HSMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSMainViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +125,8 @@
 		952FC12D16303F4700061351 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				952FC174163052B400061351 /* HSMainViewController.h */,
+				952FC175163052B400061351 /* HSMainViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -127,6 +134,7 @@
 		952FC12E16303F8600061351 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				952FC13216304BA900061351 /* MainStoryboard_iPhone.storyboard */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -186,6 +194,7 @@
 				952FC12116303EF300061351 /* Default.png in Resources */,
 				952FC12316303EF300061351 /* Default@2x.png in Resources */,
 				952FC12516303EF300061351 /* Default-568h@2x.png in Resources */,
+				952FC13316304BA900061351 /* MainStoryboard_iPhone.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,6 +207,7 @@
 			files = (
 				952FC11B16303EF300061351 /* main.m in Sources */,
 				952FC11F16303EF300061351 /* AppDelegate.m in Sources */,
+				952FC176163052B400061351 /* HSMainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
