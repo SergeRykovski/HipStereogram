@@ -7,32 +7,34 @@
 //
 
 #import "HSMainViewController.h"
+#import "HSConstants.h"
 
-@interface HSMainViewController ()
+@interface HSMainViewController () <UIActionSheetDelegate>
 
 @end
 
 @implementation HSMainViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (void)onRollYourOwn:(id)sender
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
+	UIActionSheet *actionSheet = [[UIActionSheet alloc]
+                                  initWithTitle:@"Select a background"
+                                  delegate:self
+                                  cancelButtonTitle:@"Cancel"
+                                  destructiveButtonTitle:nil
+                                  otherButtonTitles:@"Select from gallery", @"Generate random", nil];
+	[actionSheet setActionSheetStyle:UIActionSheetStyleBlackTranslucent];
+	[actionSheet showInView:self.view];
+}
+
+#pragma mark UIActionSheetDelegate methods
+
+- (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    if (1 == buttonIndex)
+    {
+        [self performSegueWithIdentifier:HSPresentEditorViewControllerSegueIdentifier sender:actionSheet];
     }
-    return self;
-}
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view.
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end

@@ -1,5 +1,5 @@
 //
-//  HSMainViewController.h
+//  HSNavigationViewController.h
 //  HipStereogram
 //
 //  Created by Serge Rykovski on 10/18/12.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HSMainViewController : UIViewController
-
-- (IBAction)onRollYourOwn:(id)sender;
+@interface HSNavigationViewController : UINavigationController
 
 @end

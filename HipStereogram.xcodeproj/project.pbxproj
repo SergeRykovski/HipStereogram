@@ -20,6 +20,7 @@
 		952FC17D1630568900061351 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 952FC17C1630568900061351 /* MainStoryboard_iPhone.storyboard */; };
 		952FC180163056F400061351 /* rollYourOwnButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 952FC17F163056F400061351 /* rollYourOwnButton.png */; };
 		952FC18316308CBD00061351 /* HSNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 952FC18216308CBD00061351 /* HSNavigationViewController.m */; };
+		95981B7C163167320034DF18 /* HSConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 95981B7B163167320034DF18 /* HSConstants.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,8 @@
 		952FC17F163056F400061351 /* rollYourOwnButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rollYourOwnButton.png; path = Resources/images/rollYourOwnButton.png; sourceTree = "<group>"; };
 		952FC18116308CBD00061351 /* HSNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSNavigationViewController.h; sourceTree = "<group>"; };
 		952FC18216308CBD00061351 /* HSNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSNavigationViewController.m; sourceTree = "<group>"; };
+		95981B7A163167320034DF18 /* HSConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSConstants.h; sourceTree = "<group>"; };
+		95981B7B163167320034DF18 /* HSConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSConstants.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +96,7 @@
 				952FC12B16303F3000061351 /* Model */,
 				952FC12C16303F3500061351 /* View */,
 				952FC12D16303F4700061351 /* Controller */,
+				95981B7E163167380034DF18 /* Utilities */,
 				952FC12E16303F8600061351 /* Resources */,
 				952FC11516303EF300061351 /* Supporting Files */,
 			);
@@ -153,6 +157,15 @@
 				952FC17F163056F400061351 /* rollYourOwnButton.png */,
 			);
 			name = images;
+			sourceTree = "<group>";
+		};
+		95981B7E163167380034DF18 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				95981B7A163167320034DF18 /* HSConstants.h */,
+				95981B7B163167320034DF18 /* HSConstants.m */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,6 +239,7 @@
 				952FC11F16303EF300061351 /* AppDelegate.m in Sources */,
 				952FC176163052B400061351 /* HSMainViewController.m in Sources */,
 				952FC18316308CBD00061351 /* HSNavigationViewController.m in Sources */,
+				95981B7C163167320034DF18 /* HSConstants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
