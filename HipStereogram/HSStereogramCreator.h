@@ -6,7 +6,7 @@
 //  Copyright (c) 2012 Serge Rykovski. All rights reserved.
 //
 
-@interface HSBackgroundPatternCreator : NSObject
+@interface HSStereogramCreator : NSObject
 
 + (UIImage *)backgroundPatternWithColorCount:(NSUInteger)colorCount shapeCount:(NSUInteger)shapeCount period:(NSUInteger)period;
 + (UIImage *)randomBackgroundPattern;

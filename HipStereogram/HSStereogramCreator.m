@@ -6,7 +6,7 @@
 //  Copyright (c) 2012 Serge Rykovski. All rights reserved.
 //
 
-#import "HSBackgroundPatternCreator.h"
+#import "HSStereogramCreator.h"
 
 #include <math.h>
 static inline double radians (double degrees) {return degrees * M_PI / 180;}
@@ -16,7 +16,7 @@ static inline double radians (double degrees) {return degrees * M_PI / 180;}
 #define PIC_WIDTH 480
 #define PIC_HEIGHT 320
 
-@implementation HSBackgroundPatternCreator
+@implementation HSStereogramCreator
 
 + (UIImage *)backgroundPatternWithColorCount:(NSUInteger)colorCount shapeCount:(NSUInteger)shapeCount period:(NSUInteger)period
 {

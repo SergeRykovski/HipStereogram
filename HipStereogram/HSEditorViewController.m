@@ -7,7 +7,7 @@
 //
 
 #import "HSEditorViewController.h"
-#import "HSBackgroundPatternCreator.h"
+#import "HSStereogramCreator.h"
 
 @interface HSEditorViewController ()
 - (void)randomizeBackground;
@@ -44,7 +44,7 @@
 
 - (void)randomizeBackground
 {
-    self.backgroundPattern = [HSBackgroundPatternCreator randomBackgroundPattern];
+    self.backgroundPattern = [HSStereogramCreator randomBackgroundPattern];
     [self tileBackgroundPatternInBackgroundImagView:self.backgroundPattern];
 }
 

@@ -8,7 +8,7 @@
 
 #import "HSMainViewController.h"
 #import "HSEditorViewController.h"
-#import "HSBackgroundPatternCreator.h"
+#import "HSStereogramCreator.h"
 #import "HSConstants.h"
 
 @interface HSMainViewController () <UIActionSheetDelegate>
