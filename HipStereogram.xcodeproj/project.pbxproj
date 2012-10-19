@@ -22,6 +22,7 @@
 		952FC18316308CBD00061351 /* HSNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 952FC18216308CBD00061351 /* HSNavigationViewController.m */; };
 		95981B7C163167320034DF18 /* HSConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 95981B7B163167320034DF18 /* HSConstants.m */; };
 		95981B8116316E0A0034DF18 /* HSBackgroundPatternCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = 95981B8016316E0A0034DF18 /* HSBackgroundPatternCreator.m */; };
+		95981B84163172290034DF18 /* HSEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95981B83163172290034DF18 /* HSEditorViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,8 @@
 		95981B7B163167320034DF18 /* HSConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSConstants.m; sourceTree = "<group>"; };
 		95981B7F16316E0A0034DF18 /* HSBackgroundPatternCreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSBackgroundPatternCreator.h; sourceTree = "<group>"; };
 		95981B8016316E0A0034DF18 /* HSBackgroundPatternCreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSBackgroundPatternCreator.m; sourceTree = "<group>"; };
+		95981B82163172290034DF18 /* HSEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSEditorViewController.h; sourceTree = "<group>"; };
+		95981B83163172290034DF18 /* HSEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSEditorViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,10 +140,12 @@
 		952FC12D16303F4700061351 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				952FC174163052B400061351 /* HSMainViewController.h */,
-				952FC175163052B400061351 /* HSMainViewController.m */,
 				952FC18116308CBD00061351 /* HSNavigationViewController.h */,
 				952FC18216308CBD00061351 /* HSNavigationViewController.m */,
+				952FC174163052B400061351 /* HSMainViewController.h */,
+				952FC175163052B400061351 /* HSMainViewController.m */,
+				95981B82163172290034DF18 /* HSEditorViewController.h */,
+				95981B83163172290034DF18 /* HSEditorViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -246,6 +251,7 @@
 				952FC18316308CBD00061351 /* HSNavigationViewController.m in Sources */,
 				95981B7C163167320034DF18 /* HSConstants.m in Sources */,
 				95981B8116316E0A0034DF18 /* HSBackgroundPatternCreator.m in Sources */,
+				95981B84163172290034DF18 /* HSEditorViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

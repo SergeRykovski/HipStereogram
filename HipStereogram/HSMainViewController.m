@@ -7,6 +7,8 @@
 //
 
 #import "HSMainViewController.h"
+#import "HSEditorViewController.h"
+#import "HSBackgroundPatternCreator.h"
 #import "HSConstants.h"
 
 @interface HSMainViewController () <UIActionSheetDelegate>
@@ -28,7 +30,6 @@
 }
 
 #pragma mark UIActionSheetDelegate methods
-
 - (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex
 {
     if (1 == buttonIndex)
