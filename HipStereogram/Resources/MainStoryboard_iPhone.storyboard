@@ -88,8 +88,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
-                    <navigationItem key="navigationItem" id="4De-RO-C7m"/>
-                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationItem key="navigationItem" id="4De-RO-C7m">
+                        <barButtonItem key="rightBarButtonItem" title="Preview" id="tBl-jx-KVD">
+                            <connections>
+                                <segue destination="D3s-FR-G9D" kind="push" id="Kx0-eZ-cGR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackTranslucent" prompted="NO"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
@@ -100,27 +106,35 @@
             </objects>
             <point key="canvasLocation" x="708" y="-92"/>
         </scene>
+        <!--Preview View Controller-->
+        <scene sceneID="tAA-jB-dfj">
+            <objects>
+                <viewController id="D3s-FR-G9D" customClass="HSPreviewViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DUi-6i-Ic5">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="oxf-zX-mNb">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="XAm-ji-LaI"/>
+                    <connections>
+                        <outlet property="stereogramImageView" destination="oxf-zX-mNb" id="4o3-cx-AbF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZGy-ew-PdB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1375" y="-92"/>
+        </scene>
     </scenes>
     <resources>
         <image name="rollYourOwnButton.png" width="400" height="400"/>
     </resources>
-    <classes>
-        <class className="HSEditorViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/HSEditorViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="backgroundImageView" candidateClass="UIImageView"/>
-            </relationships>
-        </class>
-        <class className="HSMainViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/HSMainViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="onRollYourOwn:"/>
-            </relationships>
-        </class>
-        <class className="HSNavigationViewController" superclassName="UINavigationController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/HSNavigationViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

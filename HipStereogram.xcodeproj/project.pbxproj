@@ -23,6 +23,10 @@
 		95981B7C163167320034DF18 /* HSConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 95981B7B163167320034DF18 /* HSConstants.m */; };
 		95981B8116316E0A0034DF18 /* HSStereogramCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = 95981B8016316E0A0034DF18 /* HSStereogramCreator.m */; };
 		95981B84163172290034DF18 /* HSEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95981B83163172290034DF18 /* HSEditorViewController.m */; };
+		95981B87163187F00034DF18 /* HSStereogramBackgroundImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 95981B86163187F00034DF18 /* HSStereogramBackgroundImage.m */; };
+		95981B8A16318EAA0034DF18 /* HSPreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95981B8916318EAA0034DF18 /* HSPreviewViewController.m */; };
+		95981B8D163190190034DF18 /* mask_hw.png in Resources */ = {isa = PBXBuildFile; fileRef = 95981B8B163190190034DF18 /* mask_hw.png */; };
+		95981B8E163190190034DF18 /* mask_hw_bmp.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 95981B8C163190190034DF18 /* mask_hw_bmp.bmp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +55,12 @@
 		95981B8016316E0A0034DF18 /* HSStereogramCreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSStereogramCreator.m; sourceTree = "<group>"; };
 		95981B82163172290034DF18 /* HSEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSEditorViewController.h; sourceTree = "<group>"; };
 		95981B83163172290034DF18 /* HSEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSEditorViewController.m; sourceTree = "<group>"; };
+		95981B85163187F00034DF18 /* HSStereogramBackgroundImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSStereogramBackgroundImage.h; sourceTree = "<group>"; };
+		95981B86163187F00034DF18 /* HSStereogramBackgroundImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSStereogramBackgroundImage.m; sourceTree = "<group>"; };
+		95981B8816318EAA0034DF18 /* HSPreviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSPreviewViewController.h; sourceTree = "<group>"; };
+		95981B8916318EAA0034DF18 /* HSPreviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSPreviewViewController.m; sourceTree = "<group>"; };
+		95981B8B163190190034DF18 /* mask_hw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mask_hw.png; path = Resources/images/mask_hw.png; sourceTree = "<group>"; };
+		95981B8C163190190034DF18 /* mask_hw_bmp.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = mask_hw_bmp.bmp; path = Resources/images/mask_hw_bmp.bmp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +156,8 @@
 				952FC175163052B400061351 /* HSMainViewController.m */,
 				95981B82163172290034DF18 /* HSEditorViewController.h */,
 				95981B83163172290034DF18 /* HSEditorViewController.m */,
+				95981B8816318EAA0034DF18 /* HSPreviewViewController.h */,
+				95981B8916318EAA0034DF18 /* HSPreviewViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -162,6 +174,8 @@
 		952FC17E163056E700061351 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				95981B8B163190190034DF18 /* mask_hw.png */,
+				95981B8C163190190034DF18 /* mask_hw_bmp.bmp */,
 				952FC17F163056F400061351 /* rollYourOwnButton.png */,
 			);
 			name = images;
@@ -174,6 +188,8 @@
 				95981B7B163167320034DF18 /* HSConstants.m */,
 				95981B7F16316E0A0034DF18 /* HSStereogramCreator.h */,
 				95981B8016316E0A0034DF18 /* HSStereogramCreator.m */,
+				95981B85163187F00034DF18 /* HSStereogramBackgroundImage.h */,
+				95981B86163187F00034DF18 /* HSStereogramBackgroundImage.m */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -235,6 +251,8 @@
 				952FC12516303EF300061351 /* Default-568h@2x.png in Resources */,
 				952FC17D1630568900061351 /* MainStoryboard_iPhone.storyboard in Resources */,
 				952FC180163056F400061351 /* rollYourOwnButton.png in Resources */,
+				95981B8D163190190034DF18 /* mask_hw.png in Resources */,
+				95981B8E163190190034DF18 /* mask_hw_bmp.bmp in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +270,8 @@
 				95981B7C163167320034DF18 /* HSConstants.m in Sources */,
 				95981B8116316E0A0034DF18 /* HSStereogramCreator.m in Sources */,
 				95981B84163172290034DF18 /* HSEditorViewController.m in Sources */,
+				95981B87163187F00034DF18 /* HSStereogramBackgroundImage.m in Sources */,
+				95981B8A16318EAA0034DF18 /* HSPreviewViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

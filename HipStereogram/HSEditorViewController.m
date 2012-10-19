@@ -7,45 +7,34 @@
 //
 
 #import "HSEditorViewController.h"
+#import "HSPreviewViewController.h"
 #import "HSStereogramCreator.h"
+#import "HSStereogramBackgroundImage.h"
 
 @interface HSEditorViewController ()
+@property (strong, nonatomic) HSStereogramBackgroundImage *background;
 - (void)randomizeBackground;
-- (void)tileBackgroundPatternInBackgroundImagView:(UIImage *)backgroundPattern;
 @end
 
 @implementation HSEditorViewController
 @synthesize backgroundPattern = _backgroundPattern;
 @synthesize backgroundImageView = _backgroundImageView;
+@synthesize background = _background;
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    
-    [self randomizeBackground];
-}
-
-- (void)tileBackgroundPatternInBackgroundImagView:(UIImage *)backgroundPattern
-{
-    CGSize imageSize = self.backgroundImageView.frame.size;
-	UIGraphicsBeginImageContextWithOptions(imageSize, YES, 0.0);
-	CGContextRef currentContext = UIGraphicsGetCurrentContext();
-	
-	CGRect imageRect = CGRectZero;
-	imageRect.size = backgroundPattern.size;
-	imageRect.origin = CGPointMake(0.0, 0.0);
-	
-	CGContextDrawTiledImage(currentContext, imageRect, [backgroundPattern CGImage]);
-    UIImage *background = UIGraphicsGetImageFromCurrentImageContext();
-	UIGraphicsEndImageContext();
-	
-    [self.backgroundImageView setImage:background];
+    if (nil == self.backgroundPattern)
+    {
+        [self randomizeBackground];
+    }
 }
 
 - (void)randomizeBackground
 {
     self.backgroundPattern = [HSStereogramCreator randomBackgroundPattern];
-    [self tileBackgroundPatternInBackgroundImagView:self.backgroundPattern];
+    self.background = [HSStereogramBackgroundImage imageWithPattern:self.backgroundPattern];
+    [self.backgroundImageView setImage:self.background];
 }
 
 #pragma UIResponder stuff
@@ -57,6 +46,14 @@
 - (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event
 {
     [self randomizeBackground];
+}
+
+#pragma Segue stuff
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    HSPreviewViewController *previewController = [segue destinationViewController];
+    UIImage *mask = [UIImage imageNamed:@"mask_hw"];
+    [previewController setStereogram:[HSStereogramCreator stereogramWithMask:mask background:self.background]];
 }
 
 @end
