@@ -27,6 +27,8 @@
 		95981B8A16318EAA0034DF18 /* HSPreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95981B8916318EAA0034DF18 /* HSPreviewViewController.m */; };
 		95981B8D163190190034DF18 /* mask_hw.png in Resources */ = {isa = PBXBuildFile; fileRef = 95981B8B163190190034DF18 /* mask_hw.png */; };
 		95981B8E163190190034DF18 /* mask_hw_bmp.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 95981B8C163190190034DF18 /* mask_hw_bmp.bmp */; };
+		95981B931631B7A20034DF18 /* UIImage+BitmapData.m in Sources */ = {isa = PBXBuildFile; fileRef = 95981B921631B7A20034DF18 /* UIImage+BitmapData.m */; };
+		95981B951631DDE00034DF18 /* mask_hw@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95981B941631DDE00034DF18 /* mask_hw@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +63,9 @@
 		95981B8916318EAA0034DF18 /* HSPreviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSPreviewViewController.m; sourceTree = "<group>"; };
 		95981B8B163190190034DF18 /* mask_hw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mask_hw.png; path = Resources/images/mask_hw.png; sourceTree = "<group>"; };
 		95981B8C163190190034DF18 /* mask_hw_bmp.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = mask_hw_bmp.bmp; path = Resources/images/mask_hw_bmp.bmp; sourceTree = "<group>"; };
+		95981B911631B7A20034DF18 /* UIImage+BitmapData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+BitmapData.h"; sourceTree = "<group>"; };
+		95981B921631B7A20034DF18 /* UIImage+BitmapData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+BitmapData.m"; sourceTree = "<group>"; };
+		95981B941631DDE00034DF18 /* mask_hw@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "mask_hw@2x.png"; path = "Resources/images/mask_hw@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +179,7 @@
 		952FC17E163056E700061351 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				95981B941631DDE00034DF18 /* mask_hw@2x.png */,
 				95981B8B163190190034DF18 /* mask_hw.png */,
 				95981B8C163190190034DF18 /* mask_hw_bmp.bmp */,
 				952FC17F163056F400061351 /* rollYourOwnButton.png */,
@@ -184,6 +190,7 @@
 		95981B7E163167380034DF18 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				95981B8F1631B7550034DF18 /* UIKitExtensions */,
 				95981B7A163167320034DF18 /* HSConstants.h */,
 				95981B7B163167320034DF18 /* HSConstants.m */,
 				95981B7F16316E0A0034DF18 /* HSStereogramCreator.h */,
@@ -192,6 +199,15 @@
 				95981B86163187F00034DF18 /* HSStereogramBackgroundImage.m */,
 			);
 			name = Utilities;
+			sourceTree = "<group>";
+		};
+		95981B8F1631B7550034DF18 /* UIKitExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				95981B911631B7A20034DF18 /* UIImage+BitmapData.h */,
+				95981B921631B7A20034DF18 /* UIImage+BitmapData.m */,
+			);
+			name = UIKitExtensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,6 +269,7 @@
 				952FC180163056F400061351 /* rollYourOwnButton.png in Resources */,
 				95981B8D163190190034DF18 /* mask_hw.png in Resources */,
 				95981B8E163190190034DF18 /* mask_hw_bmp.bmp in Resources */,
+				95981B951631DDE00034DF18 /* mask_hw@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +289,7 @@
 				95981B84163172290034DF18 /* HSEditorViewController.m in Sources */,
 				95981B87163187F00034DF18 /* HSStereogramBackgroundImage.m in Sources */,
 				95981B8A16318EAA0034DF18 /* HSPreviewViewController.m in Sources */,
+				95981B931631B7A20034DF18 /* UIImage+BitmapData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

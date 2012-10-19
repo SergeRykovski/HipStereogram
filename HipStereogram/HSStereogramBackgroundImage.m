@@ -25,8 +25,9 @@
 
 - (id)initWithPattern:(UIImage *)pattern
 {
+    float scale = [[UIScreen mainScreen] scale];
     CGSize imageSize = CGSizeMake(IMAGE_WIDTH, IMAGE_HEIGHT);
-    UIGraphicsBeginImageContextWithOptions(imageSize, YES, 1.0);
+    UIGraphicsBeginImageContextWithOptions(imageSize, YES, scale);
     CGContextRef currentContext = UIGraphicsGetCurrentContext();
     
     CGRect imageRect = CGRectZero;
@@ -37,7 +38,7 @@
     UIImage *backgroundImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
-    self = [super initWithCGImage:[backgroundImage CGImage] scale:1.0 orientation:UIImageOrientationUp];
+    self = [super initWithCGImage:[backgroundImage CGImage] scale:scale orientation:UIImageOrientationUp];
     if (nil != self)
     {
         self.period = pattern.size.width;

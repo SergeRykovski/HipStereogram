@@ -8,6 +8,7 @@
 
 #import "HSStereogramCreator.h"
 #import "HSStereogramBackgroundImage.h"
+#import "UIImage+BitmapData.h"
 
 #include <math.h>
 static inline double radians (double degrees) {return degrees * M_PI / 180;}
@@ -112,82 +113,21 @@ static inline double radians (double degrees) {return degrees * M_PI / 180;}
     return [self backgroundPatternWithColorCount:30 shapeCount:2500 period:80];
 }
 
-+ (CGContextRef)ARGBBitmapContextOfWidth:(NSInteger)pixelsWide height:(NSInteger)pixelsHigh
-{
-	CGContextRef    context = NULL;
-	CGColorSpaceRef colorSpace;
-	void           *bitmapData;
-	NSInteger       bitmapByteCount;
-	NSInteger       bitmapBytesPerRow;
-	
-	bitmapBytesPerRow   = (pixelsWide * 4);
-	bitmapByteCount     = (bitmapBytesPerRow * pixelsHigh);
-	
-	colorSpace = CGColorSpaceCreateDeviceRGB();
-	if (NULL == colorSpace)
-	{
-		fprintf(stderr, "Error allocating color space\n");
-		return NULL;
-	}
-	
-	bitmapData = malloc(bitmapByteCount);
-	if (NULL == bitmapData)
-	{
-		fprintf (stderr, "Memory not allocated!");
-		CGColorSpaceRelease(colorSpace);
-		return NULL;
-	}
-	
-	context = CGBitmapContextCreate (bitmapData,
-									 pixelsWide,
-									 pixelsHigh,
-									 8,      // bits per component
-									 bitmapBytesPerRow,
-									 colorSpace,
-									 kCGImageAlphaPremultipliedFirst);
-	if (NULL == context)
-	{
-		free (bitmapData);
-		fprintf (stderr, "Context not created!");
-	}
-	
-	CGColorSpaceRelease( colorSpace );
-	
-	return context;
-}
-
 + (UIImage *)stereogramWithMask:(UIImage *)mask background:(HSStereogramBackgroundImage *)background
 {
-	CGImageRef maskRef = [mask CGImage];
-	CGImageRef backgroundRef = [background CGImage];
-    NSLog(@"%zu x %zu", CGImageGetWidth(backgroundRef), CGImageGetHeight(backgroundRef));
-	
-	CGContextRef maskContext = [self ARGBBitmapContextOfWidth:CGImageGetWidth(maskRef) height:CGImageGetHeight(maskRef)];
-	if (NULL == maskContext)
-    {
-        return nil;
-    }
-	CGContextRef backgroundContext = [self ARGBBitmapContextOfWidth:(CGImageGetWidth(maskRef) + background.period) height:CGImageGetHeight(maskRef)];
-	if (NULL == backgroundContext){ return nil; }
-	
-	CGRect maskRect = CGRectMake(0.0f, 0.0f, CGImageGetWidth([mask CGImage]), CGImageGetHeight([mask CGImage]));
-	NSLog(@"%f x %f",maskRect.size.width, maskRect.size.height);
-	CGRect backgroundRect = CGRectMake(0.0f, 0.0f, CGImageGetWidth([background CGImage]), CGImageGetHeight([background CGImage]));
-	NSLog(@"%f x %f",backgroundRect.size.width, backgroundRect.size.height);
-	
-	CGContextDrawImage(maskContext, maskRect, [mask CGImage]);
-	//CGContextSaveGState(backgroundContext);
-	//CGContextTranslateCTM(backgroundContext, 0.0, backgroundRect.size.width);
-	//CGContextRotateCTM(backgroundContext, radians(-90.0f));
-	CGContextDrawImage(backgroundContext, backgroundRect, [background CGImage]);
-	//CGContextRestoreGState(backgroundContext);
-	
-	unsigned char	*maskData = CGBitmapContextGetData (maskContext),
-    *backgroundData = CGBitmapContextGetData (backgroundContext);
+	unsigned char *maskData = [mask RGBA8bitmapData];
+    unsigned char *backgroundData = [background RGBA8bitmapData];
+
 	if (NULL == maskData || NULL == backgroundData)
 	{
-		CGContextRelease(maskContext);
-		CGContextRelease(backgroundContext);
+        if (NULL != maskData)
+        {
+            free(maskData);
+        }
+        if (NULL != backgroundData)
+        {
+            free(backgroundData);
+        }
 		return nil;
 	}
 	
@@ -231,10 +171,10 @@ static inline double radians (double degrees) {return degrees * M_PI / 180;}
 		}
 	}
 	
-	UIImage *stereogram = [UIImage imageWithCGImage:CGBitmapContextCreateImage(backgroundContext)];
-	
-	CGContextRelease(maskContext);
-	CGContextRelease(backgroundContext);
+    int imageWidth = CGImageGetWidth([background CGImage]);
+    int imageHeight = CGImageGetHeight([background CGImage]);
+    UIImage *stereogram = [UIImage imegeWithBitmapData:backgroundData width:imageWidth height:imageHeight];
+
 	free(maskData);
 	free(backgroundData);
 	
