@@ -97,7 +97,6 @@
 			}
 		}
 		free(bitmapData);
-        
 	}
     else
     {

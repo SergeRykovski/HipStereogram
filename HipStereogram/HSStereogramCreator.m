@@ -144,7 +144,7 @@ static inline double radians (double degrees) {return degrees * M_PI / 180;}
 		}
 	}
 	
-	unsigned char s = background.period, alpha = 0, red = 0, green = 0, blue = 0;
+	unsigned char s = background.period * [[UIScreen mainScreen] scale], alpha = 0, red = 0, green = 0, blue = 0;
 	
 	for (int y = 0; y < h; y++)
 	{

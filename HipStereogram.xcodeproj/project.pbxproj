@@ -29,6 +29,8 @@
 		95981B8E163190190034DF18 /* mask_hw_bmp.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 95981B8C163190190034DF18 /* mask_hw_bmp.bmp */; };
 		95981B931631B7A20034DF18 /* UIImage+BitmapData.m in Sources */ = {isa = PBXBuildFile; fileRef = 95981B921631B7A20034DF18 /* UIImage+BitmapData.m */; };
 		95981B951631DDE00034DF18 /* mask_hw@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95981B941631DDE00034DF18 /* mask_hw@2x.png */; };
+		95981B981639E96B0034DF18 /* test_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 95981B961639E96B0034DF18 /* test_1.png */; };
+		95981B991639E96B0034DF18 /* test_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95981B971639E96B0034DF18 /* test_1@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +68,8 @@
 		95981B911631B7A20034DF18 /* UIImage+BitmapData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+BitmapData.h"; sourceTree = "<group>"; };
 		95981B921631B7A20034DF18 /* UIImage+BitmapData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+BitmapData.m"; sourceTree = "<group>"; };
 		95981B941631DDE00034DF18 /* mask_hw@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "mask_hw@2x.png"; path = "Resources/images/mask_hw@2x.png"; sourceTree = "<group>"; };
+		95981B961639E96B0034DF18 /* test_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = test_1.png; path = Resources/images/test_1.png; sourceTree = "<group>"; };
+		95981B971639E96B0034DF18 /* test_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "test_1@2x.png"; path = "Resources/images/test_1@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +183,8 @@
 		952FC17E163056E700061351 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				95981B961639E96B0034DF18 /* test_1.png */,
+				95981B971639E96B0034DF18 /* test_1@2x.png */,
 				95981B941631DDE00034DF18 /* mask_hw@2x.png */,
 				95981B8B163190190034DF18 /* mask_hw.png */,
 				95981B8C163190190034DF18 /* mask_hw_bmp.bmp */,
@@ -270,6 +276,8 @@
 				95981B8D163190190034DF18 /* mask_hw.png in Resources */,
 				95981B8E163190190034DF18 /* mask_hw_bmp.bmp in Resources */,
 				95981B951631DDE00034DF18 /* mask_hw@2x.png in Resources */,
+				95981B981639E96B0034DF18 /* test_1.png in Resources */,
+				95981B991639E96B0034DF18 /* test_1@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
