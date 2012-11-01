@@ -6,8 +6,8 @@
 //  Copyright (c) 2012 Serge Rykovski. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
 @interface UIColor (DepthMapping)
+
++ (UIColor *)colorWithDepth:(NSUInteger)depth;
 
 @end

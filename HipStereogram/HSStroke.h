@@ -6,8 +6,8 @@
 //  Copyright (c) 2012 Serge Rykovski. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "HSMark.h"
 
-@interface HSStroke : NSObject
+@interface HSStroke : NSObject <HSMark>
 
 @end

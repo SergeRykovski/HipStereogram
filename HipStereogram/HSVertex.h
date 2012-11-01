@@ -6,8 +6,10 @@
 //  Copyright (c) 2012 Serge Rykovski. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "HSMark.h"
 
-@interface HSVertex : NSObject
+@interface HSVertex : NSObject <HSMark>
+
+- (id)initWithLocation:(CGPoint)location;
 
 @end

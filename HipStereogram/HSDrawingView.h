@@ -6,8 +6,10 @@
 //  Copyright (c) 2012 Serge Rykovski. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "HSMark.h"
 
 @interface HSDrawingView : UIView
+
+@property (strong, nonatomic) id<HSMark> mark;
 
 @end

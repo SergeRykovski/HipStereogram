@@ -84,6 +84,11 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
+                            <view contentMode="scaleToFill" id="DP2-t4-4Ik" customClass="HSDrawingView">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -100,6 +105,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="backgroundImageView" destination="PeZ-Xm-q3F" id="AFG-Xl-NUB"/>
+                        <outlet property="drawingView" destination="DP2-t4-4Ik" id="7xj-M4-rjw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WnK-nA-8rN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -135,6 +141,33 @@
     <resources>
         <image name="rollYourOwnButton.png" width="400" height="400"/>
     </resources>
+    <classes>
+        <class className="HSDrawingView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HSDrawingView.h"/>
+        </class>
+        <class className="HSEditorViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HSEditorViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="backgroundImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="drawingView" candidateClass="HSDrawingView"/>
+            </relationships>
+        </class>
+        <class className="HSMainViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HSMainViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="onRollYourOwn:"/>
+            </relationships>
+        </class>
+        <class className="HSNavigationViewController" superclassName="UINavigationController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HSNavigationViewController.h"/>
+        </class>
+        <class className="HSPreviewViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HSPreviewViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="stereogramImageView" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
