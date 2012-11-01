@@ -31,6 +31,12 @@
 		95981B951631DDE00034DF18 /* mask_hw@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95981B941631DDE00034DF18 /* mask_hw@2x.png */; };
 		95981B981639E96B0034DF18 /* test_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 95981B961639E96B0034DF18 /* test_1.png */; };
 		95981B991639E96B0034DF18 /* test_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95981B971639E96B0034DF18 /* test_1@2x.png */; };
+		95981BC51641E0D40034DF18 /* HSVertex.m in Sources */ = {isa = PBXBuildFile; fileRef = 95981BC41641E0D40034DF18 /* HSVertex.m */; };
+		95981BC91641E0E10034DF18 /* HSDot.m in Sources */ = {isa = PBXBuildFile; fileRef = 95981BC81641E0E10034DF18 /* HSDot.m */; };
+		95981BCC1641E0F80034DF18 /* HSStroke.m in Sources */ = {isa = PBXBuildFile; fileRef = 95981BCB1641E0F80034DF18 /* HSStroke.m */; };
+		95981BD41641EA7A0034DF18 /* HSScribble.m in Sources */ = {isa = PBXBuildFile; fileRef = 95981BD31641EA790034DF18 /* HSScribble.m */; };
+		95981BDC1641F44B0034DF18 /* HSDrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 95981BDB1641F44B0034DF18 /* HSDrawingView.m */; };
+		95981BE01641F6D00034DF18 /* UIColor+DepthMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 95981BDF1641F6D00034DF18 /* UIColor+DepthMapping.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +76,19 @@
 		95981B941631DDE00034DF18 /* mask_hw@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "mask_hw@2x.png"; path = "Resources/images/mask_hw@2x.png"; sourceTree = "<group>"; };
 		95981B961639E96B0034DF18 /* test_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = test_1.png; path = Resources/images/test_1.png; sourceTree = "<group>"; };
 		95981B971639E96B0034DF18 /* test_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "test_1@2x.png"; path = "Resources/images/test_1@2x.png"; sourceTree = "<group>"; };
+		95981BC31641E0D40034DF18 /* HSVertex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSVertex.h; sourceTree = "<group>"; };
+		95981BC41641E0D40034DF18 /* HSVertex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSVertex.m; sourceTree = "<group>"; };
+		95981BC71641E0E10034DF18 /* HSDot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSDot.h; sourceTree = "<group>"; };
+		95981BC81641E0E10034DF18 /* HSDot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSDot.m; sourceTree = "<group>"; };
+		95981BCA1641E0F80034DF18 /* HSStroke.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSStroke.h; sourceTree = "<group>"; };
+		95981BCB1641E0F80034DF18 /* HSStroke.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSStroke.m; sourceTree = "<group>"; };
+		95981BCD1641E1100034DF18 /* HSMark.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HSMark.h; sourceTree = "<group>"; };
+		95981BD21641EA790034DF18 /* HSScribble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSScribble.h; sourceTree = "<group>"; };
+		95981BD31641EA790034DF18 /* HSScribble.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSScribble.m; sourceTree = "<group>"; };
+		95981BDA1641F44B0034DF18 /* HSDrawingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSDrawingView.h; sourceTree = "<group>"; };
+		95981BDB1641F44B0034DF18 /* HSDrawingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSDrawingView.m; sourceTree = "<group>"; };
+		95981BDE1641F6D00034DF18 /* UIColor+DepthMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+DepthMapping.h"; sourceTree = "<group>"; };
+		95981BDF1641F6D00034DF18 /* UIColor+DepthMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+DepthMapping.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +164,15 @@
 		952FC12B16303F3000061351 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				95981BCD1641E1100034DF18 /* HSMark.h */,
+				95981BC31641E0D40034DF18 /* HSVertex.h */,
+				95981BC41641E0D40034DF18 /* HSVertex.m */,
+				95981BC71641E0E10034DF18 /* HSDot.h */,
+				95981BC81641E0E10034DF18 /* HSDot.m */,
+				95981BCA1641E0F80034DF18 /* HSStroke.h */,
+				95981BCB1641E0F80034DF18 /* HSStroke.m */,
+				95981BD21641EA790034DF18 /* HSScribble.h */,
+				95981BD31641EA790034DF18 /* HSScribble.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -152,6 +180,8 @@
 		952FC12C16303F3500061351 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				95981BDA1641F44B0034DF18 /* HSDrawingView.h */,
+				95981BDB1641F44B0034DF18 /* HSDrawingView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -212,6 +242,8 @@
 			children = (
 				95981B911631B7A20034DF18 /* UIImage+BitmapData.h */,
 				95981B921631B7A20034DF18 /* UIImage+BitmapData.m */,
+				95981BDE1641F6D00034DF18 /* UIColor+DepthMapping.h */,
+				95981BDF1641F6D00034DF18 /* UIColor+DepthMapping.m */,
 			);
 			name = UIKitExtensions;
 			sourceTree = "<group>";
@@ -298,6 +330,12 @@
 				95981B87163187F00034DF18 /* HSStereogramBackgroundImage.m in Sources */,
 				95981B8A16318EAA0034DF18 /* HSPreviewViewController.m in Sources */,
 				95981B931631B7A20034DF18 /* UIImage+BitmapData.m in Sources */,
+				95981BC51641E0D40034DF18 /* HSVertex.m in Sources */,
+				95981BC91641E0E10034DF18 /* HSDot.m in Sources */,
+				95981BCC1641E0F80034DF18 /* HSStroke.m in Sources */,
+				95981BD41641EA7A0034DF18 /* HSScribble.m in Sources */,
+				95981BDC1641F44B0034DF18 /* HSDrawingView.m in Sources */,
+				95981BE01641F6D00034DF18 /* UIColor+DepthMapping.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
